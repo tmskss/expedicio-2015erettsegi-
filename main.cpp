@@ -26,9 +26,32 @@ int main()
         getline(beker,bekert);
         tomb[a].szoveg=bekert;
 
-        cout<<tomb[a].nap<<" "<<tomb[a].amator<<endl<<tomb[a].szoveg<<endl<<endl;
         a++;
     }
     beker.close();
+    a=a-1;
+
+//2.feladat...........................................................................
+
+    cout<<"2.feladat"<<endl;
+
+    int amator;
+    int maximum=0;
+
+    for(int i=0;i<a;i++){
+        if(tomb[i].nap==1){
+            amator=tomb[i].amator;
+        }
+    }
+    cout<<"Az elso uzenet rogzitoje: "<<amator<<"."<<endl;
+
+    amator=0;
+
+    for(int i=0;i<a;i++){
+        if(tomb[i].nap>=maximum){
+            amator=tomb[i].amator;
+        }
+    }
+    cout<<"Az utolso uzenet rogzitoje: "<<amator<<"."<<endl;
     return 0;
 }
