@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1549998105 source:c:\c++\expedicio\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
