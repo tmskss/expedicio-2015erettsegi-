@@ -99,28 +99,37 @@ int main()
     }
 
 //5.feladat.......................................................................................
+    cout<<"5.feladat"<<endl;
+
 
     szoveg eredeti[12];
     string szoveg="";
+    string eredetiszoveg="";
+
 
     for(int i=0;i<11;i++){
-        eredeti[i].nap=i;
+            eredetiszoveg=eredeti[i].szoveg;
+            eredeti[i].nap=i+1;
+
+            for(int k=0;k<89;k++){
+            eredetiszoveg=eredetiszoveg+'#';
+        }
+
         for(int j=0;j<a;j++){
-            if(tomb[a].nap==i && tomb[a].szoveg==""){
-                szoveg="#";
-            }else{
+            if(tomb[j].nap==i+1){
+                szoveg=tomb[j].szoveg;
                 for(int k=0;k<89;k++){
-                    szoveg=szoveg+'#';
+                    if(szoveg.at(k)!='#' && eredetiszoveg.at(k)=='#'){
+                        eredetiszoveg.at(k)=szoveg.at(k);
+                    }
                 }
             }
+
         }
-        eredeti[i].szoveg=szoveg;
+        eredeti[i].szoveg=eredetiszoveg;
     }
-
     for(int i=0;i<11;i++){
-        for(int j=0;j<a;j++){
-
-        }
+        cout<<eredeti[i].nap<<".nap: "<<eredeti[i].szoveg<<endl;
     }
     return 0;
 }
