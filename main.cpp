@@ -42,14 +42,14 @@ int main()
         getline(beker,bekert);
 
         tomb[a].szoveg=bekert;
-        cout<<tomb[a].nap<<" "<<tomb[a].radioamator<<endl<<tomb[a].szoveg;
-        cout<<endl;
         a++;
     }
     beker.close();
     a--;
 
 //2.feladat..........................................................................................................................
+    cout<<"2.feladat."<<endl;
+
     int amator;
 
     for(int i=0;i<a;i++){
@@ -68,6 +68,7 @@ int main()
     cout<<"Utolso: "<<amator<<endl;
 
 //4.feladat...............................................................................................................................
+    cout<<"4.feladat"<<endl;
 
     int napok[12];
 
