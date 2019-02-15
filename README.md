@@ -1,1 +1,0 @@
-# expedicio-2015erettsegi-
